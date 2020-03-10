@@ -127,7 +127,7 @@ process.stdin
       timestamp.text = timestamp.text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')
       line = line.replace(new RegExp(' *[^ ]?' + timestamp.text + '[^ ]? *'), '')
       // use timestamp as line timestamp
-      baseMessage.timestamp = Date.parse(timestamp.start.date())
+      baseMessage.timestamp = timestamp.start.date()
     } else {
       baseMessage.timestamp = Date.now()
     }
